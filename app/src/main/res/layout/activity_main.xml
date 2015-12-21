@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.justjava.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:hint="@string/person_Name"
+                android:ems="10"
+                android:id="@+id/editText"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:text="Toppings"
+                style="@style/headers" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/mocacheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="Mocca"
+                    style="@style/headers" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/chococheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="Chocolate"
+                    style="@style/headers" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/headers"
+                android:padding="16dp"
+                android:text="Cantidad"
+                 />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <Button
+                    android:id="@+id/buttonMin"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:onClick="decrease"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/quantity"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="34sp"
+                    style="@style/headers"/>
+
+                <Button
+                    android:id="@+id/buttonMas"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:onClick="increase"
+                    android:text="+" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/headers"
+                android:text="Precio" />
+
+            <TextView
+                android:id="@+id/price"
+                style="@style/headers"
+                android:text="$0" />
+
+            <Button
+                android:id="@+id/button"
+                style="@style/Base.TextAppearance.AppCompat.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:onClick="submitOrder"
+                android:singleLine="true"
+                android:text="Ordenar"
+                android:textAlignment="center"
+                android:textSize="56sp" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
+
+
